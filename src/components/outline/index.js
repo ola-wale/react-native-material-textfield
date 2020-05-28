@@ -120,15 +120,15 @@ export default class Line extends PureComponent {
         </View>
 
         <View style={[styles.rightContainer, rightContainerStyle]} pointerEvents='none'>
-          <Animated.View style={[styles.borderRight, lineStyle]} />
+          <Animated.View style={[styles.borderRight, lineStyle, {borderTopEndRadius: 10}]} />
         </View>
 
-        <View style={styles.bottomContainer} pointerEvents='none'>
-          <Animated.View style={[styles.borderBottom, lineStyle]} />
+        <View style={{...styles.bottomContainer}} pointerEvents='none'>
+          <Animated.View style={[styles.borderBottom, lineStyle, {borderBottomEndRadius: 10, borderBottomStartRadius: 10, borderRadius: 5}]} />
         </View>
 
         <View style={[styles.leftContainer, leftContainerStyle]} pointerEvents='none'>
-          <Animated.View style={[styles.borderLeft, lineStyle]} />
+          <Animated.View style={[styles.borderLeft, lineStyle, {borderTopStartRadius: 10}]} />
         </View>
       </Fragment>
     );
