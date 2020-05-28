@@ -4,7 +4,7 @@ export const borderRadius = 4;
 
 let containerStyle = {
   position: 'absolute',
-  overflow: 'hidden',
+  overflow: 'hidden'
 };
 
 export default StyleSheet.create({
@@ -13,7 +13,7 @@ export default StyleSheet.create({
     borderRadius,
 
     right: -borderRadius,
-    bottom: -borderRadius,
+    bottom: -10,
   },
 
   borderRight: {
@@ -21,7 +21,7 @@ export default StyleSheet.create({
     borderRadius,
 
     left: -borderRadius,
-    bottom: -borderRadius,
+    bottom: -borderRadius
   },
 
   borderBottom: {
@@ -49,7 +49,7 @@ export default StyleSheet.create({
     top: 0,
     left: 0,
     width: borderRadius,
-    height: borderRadius,
+    height: 10,
   },
 
   rightContainer: {
@@ -57,13 +57,13 @@ export default StyleSheet.create({
 
     top: 0,
     right: 0,
-    height: borderRadius,
+    height: 10
   },
 
   bottomContainer: {
     ...containerStyle,
 
-    top: borderRadius - ('android' === Platform.OS? 0.25 : 0),
+    top: 10 - ('android' === Platform.OS? 0.25 : 0),
     left: 0,
     right: 0,
     bottom: 0,
@@ -73,11 +73,11 @@ export default StyleSheet.create({
     ...containerStyle,
 
     top: 0,
-    height: borderRadius,
+    height: borderRadius
   },
 
   topLineContainer: {
     ...StyleSheet.absoluteFillObject,
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
 });
